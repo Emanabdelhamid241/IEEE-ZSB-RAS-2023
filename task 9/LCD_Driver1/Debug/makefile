@@ -35,6 +35,9 @@ endif
 LSS += \
 LCD_Driver1.lss \
 
+FLASH_IMAGE += \
+LCD_Driver1.hex \
+
 SIZEDUMMY += \
 sizedummy \
 
@@ -56,6 +59,12 @@ LCD_Driver1.lss: LCD_Driver1.elf
 	@echo 'Finished building: $@'
 	@echo ' '
 
+LCD_Driver1.hex: LCD_Driver1.elf
+	@echo 'Create Flash image (ihex format)'
+	-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD_Driver1.elf  "LCD_Driver1.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 sizedummy: LCD_Driver1.elf
 	@echo 'Invoking: Print Size'
 	-avr-size --format=avr --mcu=atmega16 LCD_Driver1.elf
@@ -64,10 +73,10 @@ sizedummy: LCD_Driver1.elf
 
 # Other Targets
 clean:
-	-$(RM) $(ELFS)$(OBJS)$(ASM_DEPS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) LCD_Driver1.elf
+	-$(RM) $(FLASH_IMAGE)$(ELFS)$(OBJS)$(ASM_DEPS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) LCD_Driver1.elf
 	-@echo ' '
 
-secondary-outputs: $(LSS) $(SIZEDUMMY)
+secondary-outputs: $(LSS) $(FLASH_IMAGE) $(SIZEDUMMY)
 
 .PHONY: all clean dependents
 .SECONDARY:
