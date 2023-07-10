@@ -33,35 +33,33 @@ int main(void){
 
 	KPD_enum_Get_Key_State(&Local_u8_Key);
 	_delay_ms(20);
-	LCD_enum_GO_TO_XY (1 , 5);
-	         LCD_enum_Send_char('*');
 /*is there is no keys pressed*/
 	/*no displaying on LCD*/
-//	if(Local_u8_Key != KPD_u8_Keys_NO_Pressed  ){
-//		LCD_enum_GO_TO_XY (1 , 5);
-//
-//         LCD_enum_Send_char('*');
-//         Local_u8_input[Local_u8_index_input] = Local_u8_Key;
-//         Local_u8_index_input++;
-//    	 if (Local_u8_index_input >= 4) {
-//    		if (Local_u8_input[Local_u8_index_input] ==pass[Local_u8_index_input]) {
-//    			LCD_enum_Clear ();
-//    		    LCD_enum_Send_String ("Correct Password");
-//                 }
-//    		else{
-//    			LCD_enum_Clear ();
-//    			 LCD_enum_Send_String ("wrong Password,please try again");
-//     			Local_u8_Counter++;
-//     			if(Local_u8_Counter>=4){
-//         			LCD_enum_Clear ();
-//       			 LCD_enum_Send_String ("please try again after 1 min");
-//       			 _delay_ms(60000);
-//      			LCD_enum_Clear ();
-//     			}
-//
-//    		}
-//	}
-//	}
+	if(Local_u8_Key != KPD_u8_Keys_NO_Pressed  ){
+		LCD_enum_GO_TO_XY (1 , 5);
+
+         LCD_enum_Send_char('*');
+         Local_u8_input[Local_u8_index_input] = Local_u8_Key;
+         Local_u8_index_input++;
+    	 if (Local_u8_index_input >= 4) {
+    		if (Local_u8_input[Local_u8_index_input] ==pass[Local_u8_index_input]) {
+    			LCD_enum_Clear ();
+    		    LCD_enum_Send_String ("Correct Password");
+                 }
+    		else{
+    			LCD_enum_Clear ();
+    			 LCD_enum_Send_String ("wrong Password,please try again");
+     			Local_u8_Counter++;
+     			if(Local_u8_Counter>=4){
+         			LCD_enum_Clear ();
+       			 LCD_enum_Send_String ("please try again after 1 min");
+       			 _delay_ms(60000);
+      			LCD_enum_Clear ();
+     			}
+
+    		}
+	}
+	}
 	}
 	return 0;
 	}
