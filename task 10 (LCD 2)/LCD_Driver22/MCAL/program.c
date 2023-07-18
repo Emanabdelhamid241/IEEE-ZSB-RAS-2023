@@ -7,6 +7,7 @@
 //MCAL Layer
 #include "config.h"
 #include "private.h"
+#include "interface.h"
 
 void DIO_voidInit(void){
 	DIO_u8_DDRA_REG = CONC(DIO_U8_PA7_INTIAL_DIRECTION, DIO_U8_PA6_INTIAL_DIRECTION, DIO_U8_PA5_INTIAL_DIRECTION, DIO_U8_PA4_INTIAL_DIRECTION,
@@ -44,7 +45,7 @@ u8 DIO_u8_Set_Pin_Direction  (u8 Copy_u8_Port_ID, u8 Copy_u8_Pin_ID, u8 Copy_u8_
             	   switch (Copy_u8_Pin_Direction)
             	   {
                     	   case DIO_u8_OUTPUT:SET_BIT(DIO_u8_DDRA_REG,Copy_u8_Pin_ID);break;
-                    	   case DIO_u8_INPUT:CLR_BIT (DIO_u8_DDRA_REG,Copy_u8_Pin_ID);break;
+                    	   case DIO_u8_INPUT:CLR_BIT(DIO_u8_DDRA_REG,Copy_u8_Pin_ID);break;
 			           	     default :Local_u8_Erorr_State = ES_NOK ;
 
             	   }
@@ -53,7 +54,7 @@ u8 DIO_u8_Set_Pin_Direction  (u8 Copy_u8_Port_ID, u8 Copy_u8_Pin_ID, u8 Copy_u8_
              	   switch (Copy_u8_Pin_Direction)
              	   {
                      	   case DIO_u8_OUTPUT:SET_BIT(DIO_u8_DDRB_REG,Copy_u8_Pin_ID);break;
-                     	   case DIO_u8_INPUT:CLR_BIT (DIO_u8_DDRB_REG,Copy_u8_Pin_ID);break;
+                     	   case DIO_u8_INPUT:CLR_BIT(DIO_u8_DDRB_REG,Copy_u8_Pin_ID);break;
 			           	     default :Local_u8_Erorr_State = ES_NOK ;
 
              	   }
@@ -62,7 +63,7 @@ u8 DIO_u8_Set_Pin_Direction  (u8 Copy_u8_Port_ID, u8 Copy_u8_Pin_ID, u8 Copy_u8_
                    switch (Copy_u8_Pin_Direction)
                  	   {
                          	   case DIO_u8_OUTPUT:SET_BIT(DIO_u8_DDRC_REG,Copy_u8_Pin_ID);break;
-                         	   case DIO_u8_INPUT:CLR_BIT (DIO_u8_DDRC_REG,Copy_u8_Pin_ID);break;
+                         	   case DIO_u8_INPUT:CLR_BIT(DIO_u8_DDRC_REG,Copy_u8_Pin_ID);break;
   			           	     default :Local_u8_Erorr_State = ES_NOK ;
 
                  	   }
@@ -134,25 +135,26 @@ u8 DIO_u8_Set_Pin_Value  (u8 Copy_u8_Port_ID, u8 Copy_u8_Pin_ID, u8 Copy_u8_Pin_
 		return Local_u8_Erorr_State ;
 }
 
-u8 DIO_u8_Get_Pin_Value      (u8 Copy_u8_Port_ID, u8 Copy_u8_Pin_ID, u8 * Copy_u8_Returned_Pin_Value ){
+u8 DIO_u8_Get_Pin_Value      (u8 Copy_u8_Port_ID, u8 Copy_u8_Pin_ID, u8 *Copy_u8_Returned_Pin_Value ){
 	u8 Local_u8_Erorr_State = ES_OK ;
     u8 Local_u8_Pin_Value ;
 	if((Copy_u8_Port_ID <= DIO_u8_PORTD ) && (Copy_u8_Pin_ID <= DIO_u8_PIN7) && (Copy_u8_Returned_Pin_Value != NULL)){
 		switch (Copy_u8_Port_ID)
 		{
 		     case DIO_u8_PORTA :
-		    	 Local_u8_Pin_Value =SET_BIT(DIO_u8_PORTA_REG,Copy_u8_Pin_ID);
-		    	 if (Local_u8_Pin_Value ==ES_NOK){
-		    		 * Copy_u8_Returned_Pin_Value = DIO_u8_LOW ;
+		      Local_u8_Pin_Value = GET_BIT (DIO_u8_PINA_REG, Copy_u8_Pin_ID) ;
+
+		    	 if (Local_u8_Pin_Value == DIO_u8_LOW){
+		    		 *Copy_u8_Returned_Pin_Value = DIO_u8_LOW ;
 		    	 }
 		    	 else
 		    	 {
-		    		 * Copy_u8_Returned_Pin_Value = DIO_u8_HIGH ;
+		    		 *Copy_u8_Returned_Pin_Value = DIO_u8_HIGH ;
 		    	 }
 		     break;
 		     case DIO_u8_PORTB :
-		    		    	 Local_u8_Pin_Value =SET_BIT(DIO_u8_PORTB_REG,Copy_u8_Pin_ID);
-		    		    	 if (Local_u8_Pin_Value ==ES_NOK){
+		    	 Local_u8_Pin_Value = GET_BIT(DIO_u8_PINB_REG,Copy_u8_Pin_ID ) ;
+		    		    	 if (Local_u8_Pin_Value == DIO_u8_LOW){
 		    		    		 * Copy_u8_Returned_Pin_Value = DIO_u8_LOW ;
 		    		    	 }
 		    		    	 else
@@ -161,8 +163,8 @@ u8 DIO_u8_Get_Pin_Value      (u8 Copy_u8_Port_ID, u8 Copy_u8_Pin_ID, u8 * Copy_u
 		    		    	 }
 		    		     break;
 		     case DIO_u8_PORTC :
-		    		    	 Local_u8_Pin_Value =SET_BIT(DIO_u8_PORTC_REG,Copy_u8_Pin_ID);
-		    		    	 if (Local_u8_Pin_Value ==ES_NOK){
+		    	 Local_u8_Pin_Value = GET_BIT(DIO_u8_PINC_REG,Copy_u8_Pin_ID ) ;
+		    		    	 if (Local_u8_Pin_Value ==DIO_u8_LOW){
 		    		    		 * Copy_u8_Returned_Pin_Value = DIO_u8_LOW ;
 		    		    	 }
 		    		    	 else
@@ -171,13 +173,13 @@ u8 DIO_u8_Get_Pin_Value      (u8 Copy_u8_Port_ID, u8 Copy_u8_Pin_ID, u8 * Copy_u
 		    		    	 }
 		    		     break;
 		     case DIO_u8_PORTD :
-		    		    	 Local_u8_Pin_Value =SET_BIT(DIO_u8_PORTD_REG,Copy_u8_Pin_ID);
-		    		    	 if (Local_u8_Pin_Value ==ES_NOK){
-		    		    		 * Copy_u8_Returned_Pin_Value = DIO_u8_LOW ;
+		    	 Local_u8_Pin_Value = GET_BIT(DIO_u8_PIND_REG,Copy_u8_Pin_ID ) ;
+		    	 if (Local_u8_Pin_Value ==DIO_u8_LOW){
+		    		 *Copy_u8_Returned_Pin_Value = DIO_u8_LOW ;
 		    		    	 }
 		    		    	 else
 		    		    	 {
-		    		    		 * Copy_u8_Returned_Pin_Value = DIO_u8_HIGH ;
+		    		    		 *Copy_u8_Returned_Pin_Value = DIO_u8_HIGH ;
 		    		    	 }
 		    		     break;
 		}

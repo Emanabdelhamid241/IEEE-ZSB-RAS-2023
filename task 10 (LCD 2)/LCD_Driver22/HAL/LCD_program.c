@@ -147,7 +147,7 @@ ES_t LCD_enum_Send_Custom_char(u8 Copy_u8_Location , u8 * Copy_pu8_char_Array){
 	        {
 	        	LCD_enum_Send_char(Copy_pu8_char_Array[Local_u8_Counter]);
 	        }
-	        LCD_enum_GO_TO_XY(0,0);
+	        LCD_enum_GO_TO_XY(LCD_u8_LINE1,0);
 //	        LCD_enum_Send_char(Copy_u8_Location);
 	        return ES_OK;
 
