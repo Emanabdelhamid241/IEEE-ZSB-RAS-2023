@@ -4,36 +4,45 @@
 // libraries layer
 #include "../libraries/types.h"
 #include "../libraries/math.h"
-
-void delay(void)
-{
-	for(int x=0;x<1000;x++)
-		for(int y=0;y<1000;y++)
-			__asm("NOP");
-}
-
+#include   <util/delay.h>
 int main(){
-	void DIO_voidInit();
+	void DIO_voidInit(void);
 	//Pins Directions
+	DIO_u8_Set_Pin_Direction(DIO_u8_PORTA,DIO_u8_PIN0,DIO_u8_INPUT);
 
+	DIO_u8_Set_Pin_Direction(DIO_u8_PORTA,DIO_u8_PIN7,DIO_u8_OUTPUT);
+
+	DIO_u8_Set_Pin_Direction(DIO_u8_PORTC,DIO_u8_PIN0,DIO_u8_INPUT);
+
+	DIO_u8_Set_Pin_Direction(DIO_u8_PORTC,DIO_u8_PIN2,DIO_u8_OUTPUT);
 
 	DIO_u8_Set_Pin_Direction(DIO_u8_PORTB,DIO_u8_PIN6,DIO_u8_OUTPUT);
 
+	DIO_u8_Set_Port_Direction(DIO_u8_PORTD,DIO_u8_OUTPUT);
 	DIO_u8_Set_Pin_Direction(DIO_u8_PORTC,DIO_u8_PIN7,DIO_u8_OUTPUT);
 
-
-
+//Switches
+	u8 switcha;
 	while(1){
-
-		        DIO_u8_Set_Pin_Value(DIO_u8_PORTC,DIO_u8_PIN7,DIO_u8_HIGH);
-		        DIO_u8_Set_Pin_Value(DIO_u8_PORTB,DIO_u8_PIN6,DIO_u8_HIGH);
-				delay();
-
-				DIO_u8_Set_Pin_Value(DIO_u8_PORTC,DIO_u8_PIN7,DIO_u8_LOW);
-		        DIO_u8_Set_Pin_Value(DIO_u8_PORTB,DIO_u8_PIN6,DIO_u8_LOW);
-				delay();
 //Set Pin Value
+        DIO_u8_Set_Pin_Value(DIO_u8_PORTC,DIO_u8_PIN7,DIO_u8_HIGH);
+    	_delay_ms(20);
+		DIO_u8_Set_Pin_Value(DIO_u8_PORTC,DIO_u8_PIN7,DIO_u8_LOW);
+    	_delay_ms(20);
+
 		DIO_u8_Set_Pin_Value(DIO_u8_PORTB,DIO_u8_PIN6,DIO_u8_HIGH);
+		DIO_u8_Set_Port_Value(DIO_u8_PORTD,DIO_u8_HIGH);
+//	Get Pin Values
+		DIO_u8_Get_Pin_Value(DIO_u8_PORTA,DIO_u8_PIN0,&switcha);
+//	Switch a
+		if(switcha == DIO_u8_HIGH){
+//TURN ON
+			DIO_u8_Set_Pin_Value(DIO_u8_PORTA,DIO_u8_PIN7,DIO_u8_HIGH);
+		}
+		else{
+//TURN OFF
+			DIO_u8_Set_Pin_Value(DIO_u8_PORTA,DIO_u8_PIN7,DIO_u8_LOW);
+		}
 
 
 	}

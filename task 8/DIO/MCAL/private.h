@@ -2,6 +2,7 @@
 #define PRIVATE_H_
 
 #include "../libraries/types.h"
+//#include"../libraries/Error_State.h"
 
 //macros for PARTA
 #define DIO_u8_PORTA_REG        *((volatile u8*)0x3B)
@@ -12,9 +13,9 @@
 #define DIO_u8_DDRB_REG         *((volatile u8*)0x37)
 #define DIO_u8_PINB_REG         *((volatile u8*)0x36)
 //macros for PARTC
-#define DIO_u8_PORTC_REG        *((volatile u8*)0x35)
-#define DIO_u8_DDRC_REG         *((volatile u8*)0x34)
-#define DIO_u8_PINC_REG         *((volatile u8*)0x33)
+#define DIO_u8_PORTC_REG        (*((volatile u8*)0x35))
+#define DIO_u8_DDRC_REG        ( *((volatile u8*)0x34))
+#define DIO_u8_PINC_REG         (*((volatile u8*)0x33))
 //macros for PARTD
 #define DIO_u8_PORTD_REG        *((volatile u8*)0x32)
 #define DIO_u8_DDRD_REG         *((volatile u8*)0x31)
@@ -40,9 +41,9 @@
  #define   DIO_u8_PIN2  2
  #define   DIO_u8_PIN3  3
  #define   DIO_u8_PIN4  4
- #define   DIO_u8_PIN5      5
- #define   DIO_u8_PIN6       6
- #define   DIO_u8_PIN7        7
+ #define   DIO_u8_PIN5  5
+ #define   DIO_u8_PIN6  6
+ #define   DIO_u8_PIN7  7
 
  #define   DIO_u8_INPUT 0
  #define   DIO_u8_OUTPUT 1

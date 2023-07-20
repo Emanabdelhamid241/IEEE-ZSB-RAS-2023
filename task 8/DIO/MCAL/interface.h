@@ -2,7 +2,8 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
 
-#include "../libaries/types.h"
+#include "../libraries/types.h"
+//#include"../libraries/Error_State.h"
 
 
  #define   DIO_u8_PORTA   0
@@ -24,6 +25,10 @@
 
 #define   DIO_u8_LOW 0
  #define   DIO_u8_HIGH 1
+
+#define   DIO_u8_INTIAL_INPUT   0
+#define   DIO_u8_INTIAL_OUTPUT  1
+
 
              
  #define   DIO_u8_INTIAL_LOW   0
