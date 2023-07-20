@@ -26,6 +26,10 @@
 #define   DIO_u8_LOW 0
  #define   DIO_u8_HIGH 1
 
+#define   DIO_u8_INTIAL_INPUT   0
+#define   DIO_u8_INTIAL_OUTPUT  1
+
+
              
  #define   DIO_u8_INTIAL_LOW   0
  #define   DIO_u8_INTIAL_HIGH  1
