@@ -91,4 +91,36 @@
 #define DIO_U8_PD6_INTIAL_VALUE        DIO_u8_INTIAL_LOW
 #define DIO_U8_PD7_INTIAL_VALUE        DIO_u8_INTIAL_LOW
 
+
+#define   DIO_u8_PORTA   0
+ #define   DIO_u8_PORTB   1
+ #define   DIO_u8_PORTC   2
+ #define   DIO_u8_PORTD   3
+
+ #define   DIO_u8_PIN0    0
+ #define   DIO_u8_PIN1    1
+ #define   DIO_u8_PIN2    2
+ #define   DIO_u8_PIN3    3
+ #define   DIO_u8_PIN4    4
+ #define   DIO_u8_PIN5    5
+ #define   DIO_u8_PIN6    6
+ #define   DIO_u8_PIN7    7
+
+ #define   DIO_u8_INPUT    0
+ #define   DIO_u8_OUTPUT   1
+
+#define   DIO_u8_LOW 0
+ #define   DIO_u8_HIGH 1
+
+#define   DIO_u8_INTIAL_INPUT   0
+#define   DIO_u8_INTIAL_OUTPUT  1
+
+
+
+ #define   DIO_u8_INTIAL_LOW   0
+ #define   DIO_u8_INTIAL_HIGH  1
+
+ #define   DIO_u8_INTIAL_FLOAT    0
+ #define   DIO_u8_INTIAL_PULL_UP  1
+
 #endif

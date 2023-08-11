@@ -7,7 +7,7 @@
 //MCAL Layer
 #include "config.h"
 #include "private.h"
-#include "interface.h"
+//#include "interface.h"
 
 void DIO_voidInit(void){
 	DIO_u8_DDRA_REG = CONC(DIO_U8_PA7_INTIAL_DIRECTION, DIO_U8_PA6_INTIAL_DIRECTION, DIO_U8_PA5_INTIAL_DIRECTION, DIO_U8_PA4_INTIAL_DIRECTION,
