@@ -158,7 +158,6 @@ ES_t LCD_enum_Send_Custom_char(u8 Copy_u8_Location , u8 * Copy_pu8_char_Array){
 	    }
 
 }
-
 ES_t LCD_enum_Send_Num(u32 Copy_LCD_u32_Num)
 {
 	u8 arr[10], i = 0, j = 0;

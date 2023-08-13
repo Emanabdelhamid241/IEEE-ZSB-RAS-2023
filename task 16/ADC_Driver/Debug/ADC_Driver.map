@@ -151,7 +151,7 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x27dc
+.text           0x00000000     0x27b0
  *(.vectors)
  .vectors       0x00000000       0x54 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
                 0x00000000                __vectors
@@ -268,83 +268,80 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
                 0x00000c9e       0x86 ./MCAL/4-ADC/ADC_program.o
                 0x00000c9e                ADC_enum_ADC_INIT
  .text.ADC_enum_GET_DIGITAL_VALUE_Synch_Non_Blocking
-                0x00000d24      0x10a ./MCAL/4-ADC/ADC_program.o
+                0x00000d24      0x108 ./MCAL/4-ADC/ADC_program.o
                 0x00000d24                ADC_enum_GET_DIGITAL_VALUE_Synch_Non_Blocking
  .text.ADC_enum_GET_DIGITAL_VALUE_ASynch
-                0x00000e2e       0x8e ./MCAL/4-ADC/ADC_program.o
-                0x00000e2e                ADC_enum_GET_DIGITAL_VALUE_ASynch
+                0x00000e2c       0x8c ./MCAL/4-ADC/ADC_program.o
+                0x00000e2c                ADC_enum_GET_DIGITAL_VALUE_ASynch
  .text.ADC_enum_GET_ADC_REG_VALUE
-                0x00000ebc       0x3e ./MCAL/4-ADC/ADC_program.o
-                0x00000ebc                ADC_enum_GET_ADC_REG_VALUE
+                0x00000eb8       0x3e ./MCAL/4-ADC/ADC_program.o
+                0x00000eb8                ADC_enum_GET_ADC_REG_VALUE
  .text.__vector_16
-                0x00000efa       0x82 ./MCAL/4-ADC/ADC_program.o
-                0x00000efa                __vector_16
+                0x00000ef6       0x82 ./MCAL/4-ADC/ADC_program.o
+                0x00000ef6                __vector_16
  .text.DIO_voidInit
-                0x00000f7c       0x42 ./MCAL/1-DIO/DIO_program.o
-                0x00000f7c                DIO_voidInit
+                0x00000f78       0x42 ./MCAL/1-DIO/DIO_program.o
+                0x00000f78                DIO_voidInit
  .text.DIO_u8_Set_Pin_Direction
-                0x00000fbe      0x266 ./MCAL/1-DIO/DIO_program.o
-                0x00000fbe                DIO_u8_Set_Pin_Direction
+                0x00000fba      0x266 ./MCAL/1-DIO/DIO_program.o
+                0x00000fba                DIO_u8_Set_Pin_Direction
  .text.DIO_u8_Set_Pin_Value
-                0x00001224      0x266 ./MCAL/1-DIO/DIO_program.o
-                0x00001224                DIO_u8_Set_Pin_Value
+                0x00001220      0x266 ./MCAL/1-DIO/DIO_program.o
+                0x00001220                DIO_u8_Set_Pin_Value
  .text.DIO_u8_Get_Pin_Value
-                0x0000148a      0x17a ./MCAL/1-DIO/DIO_program.o
-                0x0000148a                DIO_u8_Get_Pin_Value
+                0x00001486      0x17a ./MCAL/1-DIO/DIO_program.o
+                0x00001486                DIO_u8_Get_Pin_Value
  .text.DIO_u8_Set_Port_Direction
-                0x00001604      0x148 ./MCAL/1-DIO/DIO_program.o
-                0x00001604                DIO_u8_Set_Port_Direction
+                0x00001600      0x148 ./MCAL/1-DIO/DIO_program.o
+                0x00001600                DIO_u8_Set_Port_Direction
  .text.DIO_u8_Set_Port_Value
-                0x0000174c       0x90 ./MCAL/1-DIO/DIO_program.o
-                0x0000174c                DIO_u8_Set_Port_Value
+                0x00001748       0x90 ./MCAL/1-DIO/DIO_program.o
+                0x00001748                DIO_u8_Set_Port_Value
  .text.DIO_u8_Get_Port_Value
-                0x000017dc       0xb4 ./MCAL/1-DIO/DIO_program.o
-                0x000017dc                DIO_u8_Get_Port_Value
+                0x000017d8       0xb4 ./MCAL/1-DIO/DIO_program.o
+                0x000017d8                DIO_u8_Get_Port_Value
  .text.LCD_enum_INIT
-                0x00001890      0x478 ./HAL/1-LCD/LCD_program.o
-                0x00001890                LCD_enum_INIT
+                0x0000188c      0x478 ./HAL/1-LCD/LCD_program.o
+                0x0000188c                LCD_enum_INIT
  .text.LCD_enum_Send_Comnd
-                0x00001d08      0x1d6 ./HAL/1-LCD/LCD_program.o
-                0x00001d08                LCD_enum_Send_Comnd
+                0x00001d04      0x1d6 ./HAL/1-LCD/LCD_program.o
+                0x00001d04                LCD_enum_Send_Comnd
  .text.LCD_enum_Send_char
-                0x00001ede      0x1d6 ./HAL/1-LCD/LCD_program.o
-                0x00001ede                LCD_enum_Send_char
+                0x00001eda      0x1d6 ./HAL/1-LCD/LCD_program.o
+                0x00001eda                LCD_enum_Send_char
  .text.LCD_enum_GO_TO_XY
-                0x000020b4       0x6c ./HAL/1-LCD/LCD_program.o
-                0x000020b4                LCD_enum_GO_TO_XY
+                0x000020b0       0x6c ./HAL/1-LCD/LCD_program.o
+                0x000020b0                LCD_enum_GO_TO_XY
  .text.LCD_enum_Send_String
-                0x00002120       0x52 ./HAL/1-LCD/LCD_program.o
-                0x00002120                LCD_enum_Send_String
+                0x0000211c       0x52 ./HAL/1-LCD/LCD_program.o
+                0x0000211c                LCD_enum_Send_String
  .text.LCD_enum_Clear
-                0x00002172      0x112 ./HAL/1-LCD/LCD_program.o
-                0x00002172                LCD_enum_Clear
+                0x0000216e      0x112 ./HAL/1-LCD/LCD_program.o
+                0x0000216e                LCD_enum_Clear
  .text.LCD_enum_Send_Custom_char
-                0x00002284       0x82 ./HAL/1-LCD/LCD_program.o
-                0x00002284                LCD_enum_Send_Custom_char
+                0x00002280       0x82 ./HAL/1-LCD/LCD_program.o
+                0x00002280                LCD_enum_Send_Custom_char
  .text.LCD_enum_Send_Num
-                0x00002306       0xee ./HAL/1-LCD/LCD_program.o
-                0x00002306                LCD_enum_Send_Num
- .text.main     0x000023f4      0x2d0 ./APP/main.o
-                0x000023f4                main
- .text.ADC_void_ADC_Call_Back
-                0x000026c4       0x24 ./APP/main.o
-                0x000026c4                ADC_void_ADC_Call_Back
- .text.libgcc   0x000026e8       0x3e c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
-                0x000026e8                __mulsi3
- .text.libgcc   0x00002726       0x44 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x00002726                __udivmodsi4
- .text.libgcc   0x0000276a        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x0000276a        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x0000276a        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x0000276a       0x38 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x0000276a                __prologue_saves__
- .text.libgcc   0x000027a2       0x36 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x000027a2                __epilogue_restores__
-                0x000027d8                . = ALIGN (0x2)
+                0x00002302       0xee ./HAL/1-LCD/LCD_program.o
+                0x00002302                LCD_enum_Send_Num
+ .text.main     0x000023f0      0x2cc ./APP/main.o
+                0x000023f0                main
+ .text.libgcc   0x000026bc       0x3e c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x000026bc                __mulsi3
+ .text.libgcc   0x000026fa       0x44 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x000026fa                __udivmodsi4
+ .text.libgcc   0x0000273e        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x0000273e        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000273e        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000273e       0x38 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x0000273e                __prologue_saves__
+ .text.libgcc   0x00002776       0x36 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00002776                __epilogue_restores__
+                0x000027ac                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000027d8        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x000027d8                exit
-                0x000027d8                _exit
+ .fini9         0x000027ac        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x000027ac                exit
+                0x000027ac                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -363,11 +360,11 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000027d8        0x4 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x000027ac        0x4 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000027dc                _etext = .
+                0x000027b0                _etext = .
 
-.data           0x00800060        0xe load address 0x000027dc
+.data           0x00800060        0xe load address 0x000027b0
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
@@ -403,7 +400,7 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
                 0x0080006e                _edata = .
                 0x0080006e                PROVIDE (__data_end, .)
 
-.bss            0x0080006e        0x5
+.bss            0x0080006e        0x3
                 0x0080006e                PROVIDE (__bss_start, .)
  *(.bss)
  .bss           0x0080006e        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
@@ -435,19 +432,17 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
                 0x0080006e        0x2 ./MCAL/4-ADC/ADC_program.o
  .bss.ADC_u8_busy_flag
                 0x00800070        0x1 ./MCAL/4-ADC/ADC_program.o
- .bss.APP_ADC_u16_DIGITAL_VALUE
-                0x00800071        0x2 ./APP/main.o
  *(COMMON)
-                0x00800073                PROVIDE (__bss_end, .)
-                0x000027dc                __data_load_start = LOADADDR (.data)
-                0x000027ea                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800071                PROVIDE (__bss_end, .)
+                0x000027b0                __data_load_start = LOADADDR (.data)
+                0x000027be                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800073        0x0
-                0x00800073                PROVIDE (__noinit_start, .)
+.noinit         0x00800071        0x0
+                0x00800071                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800073                PROVIDE (__noinit_end, .)
-                0x00800073                _end = .
-                0x00800073                PROVIDE (__heap_start, .)
+                0x00800071                PROVIDE (__noinit_end, .)
+                0x00800071                _end = .
+                0x00800071                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -465,19 +460,19 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x20b8
+.stab           0x00000000     0x2070
  *(.stab)
  .stab          0x00000000      0x54c ./MCAL/4-ADC/ADC_program.o
  .stab          0x0000054c      0x918 ./MCAL/1-DIO/DIO_program.o
                                 0x924 (size before relaxing)
  .stab          0x00000e64      0xdb0 ./HAL/1-LCD/LCD_program.o
                                 0xdbc (size before relaxing)
- .stab          0x00001c14      0x4a4 ./APP/main.o
-                                0x63c (size before relaxing)
+ .stab          0x00001c14      0x45c ./APP/main.o
+                                0x5f4 (size before relaxing)
 
-.stabstr        0x00000000      0xfdf
+.stabstr        0x00000000      0xfa7
  *(.stabstr)
- .stabstr       0x00000000      0xfdf ./MCAL/4-ADC/ADC_program.o
+ .stabstr       0x00000000      0xfa7 ./MCAL/4-ADC/ADC_program.o
 
 .stab.excl
  *(.stab.excl)

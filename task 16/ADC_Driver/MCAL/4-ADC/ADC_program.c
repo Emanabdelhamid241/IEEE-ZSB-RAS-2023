@@ -48,7 +48,7 @@ ES_t  ADC_enum_GET_DIGITAL_VALUE_Synch_Non_Blocking(u8 Copy_u8_ADC_Channel_NB,u1
 	 ES_t Local_enu_Erorr_State = ES_OK ;
 	 u32 Local_u32_ADC_TiomeOut_Counter = ADC_u8_initial_counter ;
 
-     if((Copy_u8_ADC_Channel_NB < ADC_u8_Max_Channels_NB) && (Copy_u8_ADC_Channel_NB != NULL) && (ADC_u8_busy_flag ==0)){
+     if((Copy_u8_ADC_Channel_NB < ADC_u8_Max_Channels_NB) && (Copy_pu16_ADC_Digital_Value != NULL) && (ADC_u8_busy_flag ==0)){
     	 /*set ADC flag is busy*/
     	 	 	ADC_u8_busy_flag=1;
     	 /*1- clear MUX4....0*/
@@ -90,7 +90,7 @@ ES_t  ADC_enum_GET_DIGITAL_VALUE_Synch_Non_Blocking(u8 Copy_u8_ADC_Channel_NB,u1
 ES_t  ADC_enum_GET_DIGITAL_VALUE_ASynch(u8 Copy_u8_ADC_Channel_NB,void(*Copy_pf_ADC_notifction)(u16))
 {
 		 ES_t Local_enu_Erorr_State = ES_OK ;
-     if((Copy_u8_ADC_Channel_NB < ADC_u8_Max_Channels_NB) && (Copy_u8_ADC_Channel_NB != NULL) && (ADC_u8_busy_flag ==0)){
+     if((Copy_u8_ADC_Channel_NB < ADC_u8_Max_Channels_NB) && (Copy_pf_ADC_notifction != NULL) && (ADC_u8_busy_flag ==0)){
     	 /*set ADC flag is busy*/
     	 	ADC_u8_busy_flag=1;
 

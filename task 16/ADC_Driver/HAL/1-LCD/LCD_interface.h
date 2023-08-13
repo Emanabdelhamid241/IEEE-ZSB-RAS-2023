@@ -2,13 +2,14 @@
 /******************  Date :   2 May 2023     ********************/
 /******************   SW :         LCD       ********************/
 /******************  version :     1.0       ********************/
+#include "LCD_config.h"
 #ifndef LCD_INTERFACE_H
 #define LCD_INTERFACE_H
 
-//macros for lines
-#define LCD_u8_LINE1   1
-#define LCD_u8_LINE2   2
-
+////macros for lines
+//#define LCD_u8_LINE1   1
+//#define LCD_u8_LINE2   2
+//
 ES_t LCD_enum_INIT (void);
 ES_t LCD_enum_Send_Comnd(u8 Copy_u8_Comnd);
 ES_t LCD_enum_Send_char(u8 Copy_u8_char);
