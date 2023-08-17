@@ -44,7 +44,7 @@ u8 Number_Of_Forloop =Number_Of_Steps/number_of_steps_in_full_step;
 //FOR LOOP TO ROTATE AT CUSTOM ANGLE
 
 if(copy_u8_direction==CW){
-for (Local_u8_step_Counter=start;Local_u8_step_Counter>Number_Of_Forloop;Local_u8_step_Counter++){
+for (Local_u8_step_Counter=start;Local_u8_step_Counter<Number_Of_Forloop;Local_u8_step_Counter++){
 
      //step1 -------->BLUE PIN IS LOW
  DIO_u8_Set_Pin_Value (STEPPER_MOTOR_BLUE_PORT,STEPPER_MOTOR_BLUE_PIN ,DIO_u8_LOW );
@@ -73,7 +73,7 @@ DIO_u8_Set_Pin_Value (STEPPER_MOTOR_ORANGE_PORT,STEPPER_MOTOR_ORANGE_PIN ,DIO_u8
 }
 }
 else if (copy_u8_direction==CCW){
-	for (Local_u8_step_Counter=start;Local_u8_step_Counter>Number_Of_Forloop;Local_u8_step_Counter++){
+	for (Local_u8_step_Counter=start;Local_u8_step_Counter<Number_Of_Forloop;Local_u8_step_Counter++){
 
 	     //step1 -------->BLUE PIN IS LOW
 	 DIO_u8_Set_Pin_Value (STEPPER_MOTOR_BLUE_PORT,STEPPER_MOTOR_BLUE_PIN ,DIO_u8_HIGH );

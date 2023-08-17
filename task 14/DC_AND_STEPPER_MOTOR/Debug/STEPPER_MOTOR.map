@@ -37,6 +37,12 @@ c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/g
 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
                               c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o) (__fpcmp_parts_f)
 
+Allocating common symbols
+Common symbol       size              file
+
+stepper_direction   0x1               ./APP/main.o
+Local_u8_input      0x4               ./APP/main.o
+
 Memory Configuration
 
 Name             Origin             Length             Attributes
@@ -151,7 +157,7 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x34a6
+.text           0x00000000     0x3836
  *(.vectors)
  .vectors       0x00000000       0x54 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
                 0x00000000                __vectors
@@ -329,22 +335,37 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
  .text.LCD_enum_Send_Custom_char
                 0x00002f02       0x82 ./HAL/1-LCD/LCD_program.o
                 0x00002f02                LCD_enum_Send_Custom_char
- .text.main     0x00002f84      0x46c ./APP/main.o
-                0x00002f84                main
- .text.libgcc   0x000033f0       0x44 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x000033f0                __udivmodsi4
- .text.libgcc   0x00003434        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00003434        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x00003434        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00003434       0x38 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x00003434                __prologue_saves__
- .text.libgcc   0x0000346c       0x36 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x0000346c                __epilogue_restores__
-                0x000034a2                . = ALIGN (0x2)
+ .text.LCD_enum_Send_Num
+                0x00002f84       0xee ./HAL/1-LCD/LCD_program.o
+                0x00002f84                LCD_enum_Send_Num
+ .text.main     0x00003072      0x4f4 ./APP/main.o
+                0x00003072                main
+ .text.motor_option
+                0x00003566       0x70 ./APP/main.o
+                0x00003566                motor_option
+ .text.stepper_MOTOR_void_direction
+                0x000035d6       0x64 ./APP/main.o
+                0x000035d6                stepper_MOTOR_void_direction
+ .text.DC_MOTOR_void_direction
+                0x0000363a       0x84 ./APP/main.o
+                0x0000363a                DC_MOTOR_void_direction
+ .text.choice_angle
+                0x000036be       0xc2 ./APP/main.o
+                0x000036be                choice_angle
+ .text.libgcc   0x00003780       0x44 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00003780                __udivmodsi4
+ .text.libgcc   0x000037c4        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x000037c4        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x000037c4        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x000037c4       0x38 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x000037c4                __prologue_saves__
+ .text.libgcc   0x000037fc       0x36 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x000037fc                __epilogue_restores__
+                0x00003832                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000034a2        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x000034a2                exit
-                0x000034a2                _exit
+ .fini9         0x00003832        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00003832                exit
+                0x00003832                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -363,11 +384,11 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000034a2        0x4 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00003832        0x4 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000034a6                _etext = .
+                0x00003836                _etext = .
 
-.data           0x00800060       0xb0 load address 0x000034a6
+.data           0x00800060       0xc8 load address 0x00003836
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
@@ -376,92 +397,87 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
  .data          0x00800060        0x0 ./HAL/3-DC_Motor/DC_MOTOR_program.o
  .data          0x00800060        0x0 ./HAL/2-KPD/KPD_program.o
  .data          0x00800060        0x0 ./HAL/1-LCD/LCD_program.o
- .data          0x00800060       0x8a ./APP/main.o
- .data          0x008000ea        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .data          0x008000ea        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .data          0x008000ea        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .data          0x008000ea        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .data          0x008000ea        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .data          0x008000ea        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .data          0x008000ea        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .data          0x008000ea        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
- .data          0x008000ea        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .data          0x008000ea        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .data          0x008000ea        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .data          0x008000ea        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .data          0x008000ea        0x8 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
-                0x008000ea                __thenan_sf
- .data          0x008000f2        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .data          0x008000f2        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .data          0x008000f2        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .data          0x008000f2        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .data          0x008000f2        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .data          0x00800060       0xa7 ./APP/main.o
+ .data          0x00800107        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x00800107        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800107        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x00800107        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00800107        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .data          0x00800107        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .data          0x00800107        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .data          0x00800107        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+ .data          0x00800107        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .data          0x00800107        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .data          0x00800107        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .data          0x00800107        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .data          0x00800107        0x8 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+                0x00800107                __thenan_sf
+ .data          0x0080010f        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .data          0x0080010f        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .data          0x0080010f        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .data          0x0080010f        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .data          0x0080010f        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
  *(.data*)
- .data.pass     0x008000f2        0x5 ./APP/main.o
-                0x008000f2                pass
  *(.rodata)
  *(.rodata*)
  .rodata.KPD_Au8_Keys
-                0x008000f7       0x10 ./HAL/2-KPD/KPD_program.o
-                0x008000f7                KPD_Au8_Keys
+                0x0080010f       0x10 ./HAL/2-KPD/KPD_program.o
+                0x0080010f                KPD_Au8_Keys
  .rodata.KPD_Au8_Rows_Pins
-                0x00800107        0x4 ./HAL/2-KPD/KPD_program.o
-                0x00800107                KPD_Au8_Rows_Pins
+                0x0080011f        0x4 ./HAL/2-KPD/KPD_program.o
+                0x0080011f                KPD_Au8_Rows_Pins
  .rodata.KPD_Au8_Cols_Pins
-                0x0080010b        0x4 ./HAL/2-KPD/KPD_program.o
-                0x0080010b                KPD_Au8_Cols_Pins
+                0x00800123        0x4 ./HAL/2-KPD/KPD_program.o
+                0x00800123                KPD_Au8_Cols_Pins
  *(.gnu.linkonce.d*)
-                0x00800110                . = ALIGN (0x2)
- *fill*         0x0080010f        0x1 00
-                0x00800110                _edata = .
-                0x00800110                PROVIDE (__data_end, .)
+                0x00800128                . = ALIGN (0x2)
+ *fill*         0x00800127        0x1 00
+                0x00800128                _edata = .
+                0x00800128                PROVIDE (__data_end, .)
 
-.bss            0x00800110        0x6
-                0x00800110                PROVIDE (__bss_start, .)
+.bss            0x00800128        0x5
+                0x00800128                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
- .bss           0x00800110        0x0 ./MCAL/program.o
- .bss           0x00800110        0x0 ./HAL/4-STEPPER_MOTOR/STEPPER_MOTOR_program.o
- .bss           0x00800110        0x0 ./HAL/3-DC_Motor/DC_MOTOR_program.o
- .bss           0x00800110        0x0 ./HAL/2-KPD/KPD_program.o
- .bss           0x00800110        0x0 ./HAL/1-LCD/LCD_program.o
- .bss           0x00800110        0x0 ./APP/main.o
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .bss           0x00800110        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ .bss           0x00800128        0x0 ./MCAL/program.o
+ .bss           0x00800128        0x0 ./HAL/4-STEPPER_MOTOR/STEPPER_MOTOR_program.o
+ .bss           0x00800128        0x0 ./HAL/3-DC_Motor/DC_MOTOR_program.o
+ .bss           0x00800128        0x0 ./HAL/2-KPD/KPD_program.o
+ .bss           0x00800128        0x0 ./HAL/1-LCD/LCD_program.o
+ .bss           0x00800128        0x0 ./APP/main.o
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .bss           0x00800128        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
  *(.bss*)
- .bss.Local_u8_input
-                0x00800110        0x5 ./APP/main.o
-                0x00800110                Local_u8_input
- .bss.Local_u8_index_input
-                0x00800115        0x1 ./APP/main.o
-                0x00800115                Local_u8_index_input
  *(COMMON)
-                0x00800116                PROVIDE (__bss_end, .)
-                0x000034a6                __data_load_start = LOADADDR (.data)
-                0x00003556                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800128        0x5 ./APP/main.o
+                0x00800128                stepper_direction
+                0x00800129                Local_u8_input
+                0x0080012d                PROVIDE (__bss_end, .)
+                0x00003836                __data_load_start = LOADADDR (.data)
+                0x000038fe                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800116        0x0
-                0x00800116                PROVIDE (__noinit_start, .)
+.noinit         0x0080012d        0x0
+                0x0080012d                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800116                PROVIDE (__noinit_end, .)
-                0x00800116                _end = .
-                0x00800116                PROVIDE (__heap_start, .)
+                0x0080012d                PROVIDE (__noinit_end, .)
+                0x0080012d                _end = .
+                0x0080012d                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -479,7 +495,7 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x2f7c
+.stab           0x00000000     0x34c8
  *(.stab)
  .stab          0x00000000      0x924 ./MCAL/program.o
  .stab          0x00000924      0xc0c ./HAL/4-STEPPER_MOTOR/STEPPER_MOTOR_program.o
@@ -488,14 +504,14 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
                                 0x540 (size before relaxing)
  .stab          0x000018d8      0x510 ./HAL/2-KPD/KPD_program.o
                                 0x6a8 (size before relaxing)
- .stab          0x00001de8      0xb34 ./HAL/1-LCD/LCD_program.o
-                                0xccc (size before relaxing)
- .stab          0x0000291c      0x660 ./APP/main.o
-                                0x7f8 (size before relaxing)
+ .stab          0x00001de8      0xc24 ./HAL/1-LCD/LCD_program.o
+                                0xdbc (size before relaxing)
+ .stab          0x00002a0c      0xabc ./APP/main.o
+                                0xc54 (size before relaxing)
 
-.stabstr        0x00000000     0x114d
+.stabstr        0x00000000     0x128b
  *(.stabstr)
- .stabstr       0x00000000     0x114d ./MCAL/program.o
+ .stabstr       0x00000000     0x128b ./MCAL/program.o
 
 .stab.excl
  *(.stab.excl)

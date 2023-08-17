@@ -16,4 +16,5 @@ ES_t LCD_enum_GO_TO_XY (u8 Copy_u8_line_Num , u8 Copy_u8_Location );
 ES_t LCD_enum_Send_String(u8 *copy_pu8_string);
 ES_t LCD_enum_Clear (void);
 ES_t LCD_enum_Send_Custom_char(u8 Copy_u8_Location , u8 * Copy_pu8_char_Array);
+ES_t LCD_enum_Send_Num(u32 Copy_LCD_u32_Num);
 #endif

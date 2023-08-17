@@ -2,6 +2,7 @@
 /******************  Date :   22 july 2023    ********************/
 /******************   SW : STEPPER MOTOR       ********************/
 /******************  version :     1.0       ********************/
+#include "STEPPER_MOTOR_config.h"
 #ifndef STEPPER_MOTOR_INTERFACE_H
 #define STEPPER_MOTOR_INTERFACE_H
 
