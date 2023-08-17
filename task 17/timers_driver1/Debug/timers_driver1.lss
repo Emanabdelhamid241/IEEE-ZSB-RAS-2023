@@ -5839,13 +5839,13 @@ int main(){
     2648:	0e 94 e3 08 	call	0x11c6	; 0x11c6 <DIO_voidInit>
     LCD_enum_INIT();
     264c:	0e 94 6e 0d 	call	0x1adc	; 0x1adc <LCD_enum_INIT>
-		    DIO_u8_Set_Pin_Direction(DIO_u8_PORTB,DIO_u8_PIN0,DIO_u8_INTIAL_OUTPUT);
-    2650:	81 e0       	ldi	r24, 0x01	; 1
+		    DIO_u8_Set_Pin_Direction(DIO_u8_PORTA,DIO_u8_PIN0,DIO_u8_INTIAL_OUTPUT);
+    2650:	80 e0       	ldi	r24, 0x00	; 0
     2652:	60 e0       	ldi	r22, 0x00	; 0
     2654:	41 e0       	ldi	r20, 0x01	; 1
     2656:	0e 94 05 09 	call	0x120a	; 0x120a <DIO_u8_Set_Pin_Direction>
-		    DIO_u8_Set_Pin_Value(DIO_u8_PORTB,DIO_u8_PIN0,DIO_u8_LOW);
-    265a:	81 e0       	ldi	r24, 0x01	; 1
+		    DIO_u8_Set_Pin_Value(DIO_u8_PORTA,DIO_u8_PIN0,DIO_u8_LOW);
+    265a:	80 e0       	ldi	r24, 0x00	; 0
     265c:	60 e0       	ldi	r22, 0x00	; 0
     265e:	40 e0       	ldi	r20, 0x00	; 0
     2660:	0e 94 38 0a 	call	0x1470	; 0x1470 <DIO_u8_Set_Pin_Value>
@@ -5888,18 +5888,18 @@ void APP_void_tog_led(){
     2698:	cd bf       	out	0x3d, r28	; 61
 u8 switcha;
 static u8 counter=0;
-DIO_u8_Set_Pin_Direction(DIO_u8_PORTA,DIO_u8_PIN7,DIO_u8_INPUT);
-    269a:	80 e0       	ldi	r24, 0x00	; 0
-    269c:	67 e0       	ldi	r22, 0x07	; 7
+DIO_u8_Set_Pin_Direction(DIO_u8_PORTB,DIO_u8_PIN0,DIO_u8_INPUT);
+    269a:	81 e0       	ldi	r24, 0x01	; 1
+    269c:	60 e0       	ldi	r22, 0x00	; 0
     269e:	40 e0       	ldi	r20, 0x00	; 0
     26a0:	0e 94 05 09 	call	0x120a	; 0x120a <DIO_u8_Set_Pin_Direction>
 while(1){
-	DIO_u8_Get_Pin_Value(DIO_u8_PORTA,DIO_u8_PIN7,&switcha);
+	DIO_u8_Get_Pin_Value(DIO_u8_PORTB,DIO_u8_PIN0,&switcha);
     26a4:	9e 01       	movw	r18, r28
     26a6:	21 5f       	subi	r18, 0xF1	; 241
     26a8:	3f 4f       	sbci	r19, 0xFF	; 255
-    26aa:	80 e0       	ldi	r24, 0x00	; 0
-    26ac:	67 e0       	ldi	r22, 0x07	; 7
+    26aa:	81 e0       	ldi	r24, 0x01	; 1
+    26ac:	60 e0       	ldi	r22, 0x00	; 0
     26ae:	a9 01       	movw	r20, r18
     26b0:	0e 94 6b 0b 	call	0x16d6	; 0x16d6 <DIO_u8_Get_Pin_Value>
     26b4:	80 e0       	ldi	r24, 0x00	; 0
@@ -6046,8 +6046,8 @@ _delay_ms(double __ms)
     279a:	81 30       	cpi	r24, 0x01	; 1
     279c:	d1 f4       	brne	.+52     	; 0x27d2 <APP_void_tog_led+0x14c>
 //TURN ON
-			DIO_u8_Set_Pin_Value(DIO_u8_PORTB,DIO_u8_PIN0,DIO_u8_HIGH);
-    279e:	81 e0       	ldi	r24, 0x01	; 1
+			DIO_u8_Set_Pin_Value(DIO_u8_PORTA,DIO_u8_PIN0,DIO_u8_HIGH);
+    279e:	80 e0       	ldi	r24, 0x00	; 0
     27a0:	60 e0       	ldi	r22, 0x00	; 0
     27a2:	41 e0       	ldi	r20, 0x01	; 1
     27a4:	0e 94 38 0a 	call	0x1470	; 0x1470 <DIO_u8_Set_Pin_Value>
@@ -6074,8 +6074,8 @@ _delay_ms(double __ms)
 		}
 		else{
 //TURN OFF
-			DIO_u8_Set_Pin_Value(DIO_u8_PORTB,DIO_u8_PIN0,DIO_u8_LOW);
-    27d2:	81 e0       	ldi	r24, 0x01	; 1
+			DIO_u8_Set_Pin_Value(DIO_u8_PORTA,DIO_u8_PIN0,DIO_u8_LOW);
+    27d2:	80 e0       	ldi	r24, 0x00	; 0
     27d4:	60 e0       	ldi	r22, 0x00	; 0
     27d6:	40 e0       	ldi	r20, 0x00	; 0
     27d8:	0e 94 38 0a 	call	0x1470	; 0x1470 <DIO_u8_Set_Pin_Value>
