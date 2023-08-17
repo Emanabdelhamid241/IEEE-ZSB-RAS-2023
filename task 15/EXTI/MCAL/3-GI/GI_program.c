@@ -9,9 +9,8 @@
 #include"../../libraries/types.h"
 
 //MCAL
-//#include "GI_config.h"
-//#include "GI_private.h"
-#include "GI_interface.h"
+#include "GI_config.h"
+#include "GI_private.h"
 
 ES_t  GI_enum_GI_Enable(void){
 	SET_BIT(GI_u8_SREG_REG,GI_u8_PIN7);

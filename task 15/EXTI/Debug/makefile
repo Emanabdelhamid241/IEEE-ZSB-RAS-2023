@@ -11,6 +11,8 @@ RM := rm -rf
 -include MCAL/3-GI/subdir.mk
 -include MCAL/2-EXTI/subdir.mk
 -include MCAL/1-DIO/subdir.mk
+-include HAL/4-STEPPER_MOTOR/subdir.mk
+-include HAL/3-DC_Motor/subdir.mk
 -include HAL/2-KPD/subdir.mk
 -include HAL/1-LCD/subdir.mk
 -include APP/subdir.mk

@@ -5,6 +5,9 @@
 #ifndef KPD_CONFIG_H
 #define KPD_CONFIG_H
 
+//macros if there is no keys pressed
+#define KPD_u8_Keys_NO_Pressed    0xff
+
 //macros of port
 #define KPD_u8_PORT               DIO_u8_PORTA
 //macros of pins

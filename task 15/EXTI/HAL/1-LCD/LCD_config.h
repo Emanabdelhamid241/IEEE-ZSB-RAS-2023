@@ -17,7 +17,16 @@ DIO_u8_PORTD
 #define LCD_u8_RW_PIN        DIO_u8_PIN1
 #define LCD_u8_E_PIN         DIO_u8_PIN2
 
-#define LCD_u8_DATA_PORT  DIO_u8_PORTD
+#define LCD_u8_DATA_PORT  DIO_u8_PORTC
+
+//#define LCD_u8_DATA0_PORT  DIO_u8_PORTD
+//#define LCD_u8_DATA1_PORT  DIO_u8_PORTD
+//#define LCD_u8_DATA3_PORT  DIO_u8_PORTD
+//#define LCD_u8_DATA4_PORT  DIO_u8_PORTD
+//#define LCD_u8_DATA5_PORT  DIO_u8_PORTD
+//#define LCD_u8_DATA6_PORT  DIO_u8_PORTD
+//#define LCD_u8_DATA7_PORT  DIO_u8_PORTD
+//#define LCD_u8_DATA8_PORT  DIO_u8_PORTD
 
 //macros of LCD MODE
 /* options
@@ -26,8 +35,4 @@ DIO_u8_PORTD
  */
 #define LCD_u8_MODE    LCD_u8_MODE_8_bit
 
-
-//macros for lines
-#define LCD_u8_LINE1   1
-#define LCD_u8_LINE2   2
 #endif

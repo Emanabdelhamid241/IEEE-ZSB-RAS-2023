@@ -106,6 +106,7 @@ ES_t  EXTI_enum_EXTI_Enable(u8 Copy_u8_EXTI_Index,u8 Copy_u8_Edge_Index){
 }
 ES_t  EXTI_enum_EXTI_Disable(u8 Copy_u8_EXTI_Index){
 	 ES_t Local_enu_Erorr_State = ES_OK ;
+	 if(Copy_u8_EXTI_Index<=EXTI_u8_INT2){
      switch(Copy_u8_EXTI_Index){
      case EXTI_u8_INT0 :
     	 /* Disable EXTI0 >>> PIC */
@@ -119,7 +120,7 @@ ES_t  EXTI_enum_EXTI_Disable(u8 Copy_u8_EXTI_Index){
          /* Disable EXTI2 >>> PIC */
          CLR_BIT(EXTI_u8_GICR_REG  ,EXTI2_u8_PIN5  );
       	 break;
-
+     }
      }
 	 return Local_enu_Erorr_State;
 }
