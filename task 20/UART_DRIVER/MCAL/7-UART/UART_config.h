@@ -5,5 +5,5 @@
 #ifndef UART_CONFIG_H
 #define UART_CONFIG_H
 
-
+#define     recieve_sring_mark         '#'
 #endif

@@ -20,9 +20,6 @@ ES_t  UART_enum_INIT (void)
 	u16 local_u16_baud_rate_value = UART_u8_inital_baud_rate_9600;
     u8 local_u8_UCSRC_value= UART_INTIAL_UCSRC_value;
 
-    /*baud rate = 9600*/
-    UART_u8_UBRRL_REG= (u8)local_u16_baud_rate_value;
-    UART_u8_UBRRH_REG= (u8)(local_u16_baud_rate_value >> no_of_bit_of_one_byte);
 
      /*Normal speed*/
 	CLR_BIT(UART_u8_UCSRA_REG,UART_u8_U2X_BIT1);
@@ -48,10 +45,14 @@ ES_t  UART_enum_INIT (void)
 	CLR_BIT(local_u8_UCSRC_value,UART_u8_UPM1_BIT5);
 
 	/*Enable 2 Stop Bits*/
-	SET_BIT(local_u8_UCSRC_value,UART_u8_USBS_BIT3);
+	CLR_BIT(local_u8_UCSRC_value,UART_u8_USBS_BIT3);
 
     /*Update UCSRC REG*/
 	UART_u8_UCSRC_REG=local_u8_UCSRC_value;
+
+	/*baud rate = 9600*/
+	    UART_u8_UBRRL_REG= (u8)local_u16_baud_rate_value;
+	    UART_u8_UBRRH_REG= (u8)(local_u16_baud_rate_value >> no_of_bit_of_one_byte);
 
 
 	//test
@@ -80,7 +81,7 @@ ES_t  UART_enum_RECIEVE_Byte (u8 *copy_UART_pu8_recieve_byte)
 
 	/* wait until the data is recieved */
 	while (!GET_BIT(UART_u8_UCSRA_REG,UART_u8_RXC_BIT7));
-
+//while(((UART_u8_UCSRA_REG >>7)&1)==0);
 	/* read data byte*/
 	*copy_UART_pu8_recieve_byte=UART_u8_UDR_REG;
 
@@ -117,9 +118,18 @@ ES_t UART_enum_Send_String(u8 *copy_pu8_string)
 ES_t  UART_enum_RECIEVE_String (u8 * copy_UART_pu8_recieve_String)
 {
 	ES_t Local_enu_Erorr_State= ES_OK;
+	u8 i=0;
+	u8 local_u8_counter=0;
 		if(copy_UART_pu8_recieve_String != NULL)
 		{
+if(copy_UART_pu8_recieve_String[i]==recieve_sring_mark)   local_u8_counter++;
+if(local_u8_counter<=2){
+	/* wait until the data is recieved */
+		while (!GET_BIT(UART_u8_UCSRA_REG,UART_u8_RXC_BIT7));
+		/* read data byte*/
+		copy_UART_pu8_recieve_String[i]=UART_u8_UDR_REG;
 
+}
 		}
 		else{
 				Local_enu_Erorr_State = ES_NOK;

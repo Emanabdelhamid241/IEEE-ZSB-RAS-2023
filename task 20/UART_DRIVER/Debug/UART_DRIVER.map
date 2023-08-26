@@ -116,7 +116,7 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0xc2e
+.text           0x00000000      0xc6a
  *(.vectors)
  .vectors       0x00000000       0x54 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
                 0x00000000                __vectors
@@ -211,38 +211,38 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
                 0x000001b6       0x78 ./MCAL/7-UART/UART_program.o
                 0x000001b6                UART_enum_Send_String
  .text.UART_enum_RECIEVE_String
-                0x0000022e       0x2c ./MCAL/7-UART/UART_program.o
+                0x0000022e       0x7c ./MCAL/7-UART/UART_program.o
                 0x0000022e                UART_enum_RECIEVE_String
  .text.DIO_voidInit
-                0x0000025a       0x44 ./MCAL/1-DIO/DIO_program.o
-                0x0000025a                DIO_voidInit
+                0x000002aa       0x44 ./MCAL/1-DIO/DIO_program.o
+                0x000002aa                DIO_voidInit
  .text.DIO_u8_Set_Pin_Direction
-                0x0000029e      0x266 ./MCAL/1-DIO/DIO_program.o
-                0x0000029e                DIO_u8_Set_Pin_Direction
+                0x000002ee      0x266 ./MCAL/1-DIO/DIO_program.o
+                0x000002ee                DIO_u8_Set_Pin_Direction
  .text.DIO_u8_Set_Pin_Value
-                0x00000504      0x266 ./MCAL/1-DIO/DIO_program.o
-                0x00000504                DIO_u8_Set_Pin_Value
+                0x00000554      0x266 ./MCAL/1-DIO/DIO_program.o
+                0x00000554                DIO_u8_Set_Pin_Value
  .text.DIO_u8_Get_Pin_Value
-                0x0000076a      0x17a ./MCAL/1-DIO/DIO_program.o
-                0x0000076a                DIO_u8_Get_Pin_Value
+                0x000007ba      0x17a ./MCAL/1-DIO/DIO_program.o
+                0x000007ba                DIO_u8_Get_Pin_Value
  .text.DIO_u8_Set_Port_Direction
-                0x000008e4      0x148 ./MCAL/1-DIO/DIO_program.o
-                0x000008e4                DIO_u8_Set_Port_Direction
+                0x00000934      0x148 ./MCAL/1-DIO/DIO_program.o
+                0x00000934                DIO_u8_Set_Port_Direction
  .text.DIO_u8_Set_Port_Value
-                0x00000a2c       0x90 ./MCAL/1-DIO/DIO_program.o
-                0x00000a2c                DIO_u8_Set_Port_Value
+                0x00000a7c       0x90 ./MCAL/1-DIO/DIO_program.o
+                0x00000a7c                DIO_u8_Set_Port_Value
  .text.DIO_u8_Get_Port_Value
-                0x00000abc       0xb4 ./MCAL/1-DIO/DIO_program.o
-                0x00000abc                DIO_u8_Get_Port_Value
- .text.main     0x00000b70       0xba ./APP/main.o
-                0x00000b70                main
- .text.libgcc   0x00000c2a        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00000c2a        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
-                0x00000c2a                . = ALIGN (0x2)
+                0x00000b0c       0xb4 ./MCAL/1-DIO/DIO_program.o
+                0x00000b0c                DIO_u8_Get_Port_Value
+ .text.main     0x00000bc0       0xa6 ./APP/main.o
+                0x00000bc0                main
+ .text.libgcc   0x00000c66        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000c66        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000c66                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000c2a        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00000c2a                exit
-                0x00000c2a                _exit
+ .fini9         0x00000c66        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00000c66                exit
+                0x00000c66                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -261,48 +261,48 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000c2a        0x4 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000c66        0x4 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000c2e                _etext = .
+                0x00000c6a                _etext = .
 
-.data           0x00800060       0x12 load address 0x00000c2e
+.data           0x00800060       0x16 load address 0x00000c6a
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
  .data          0x00800060        0x0 ./MCAL/7-UART/UART_program.o
  .data          0x00800060        0x0 ./MCAL/1-DIO/DIO_program.o
- .data          0x00800060       0x12 ./APP/main.o
- .data          0x00800072        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .data          0x00800072        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x00800060       0x16 ./APP/main.o
+ .data          0x00800076        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800076        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
  *(.data*)
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x00800072                . = ALIGN (0x2)
-                0x00800072                _edata = .
-                0x00800072                PROVIDE (__data_end, .)
+                0x00800076                . = ALIGN (0x2)
+                0x00800076                _edata = .
+                0x00800076                PROVIDE (__data_end, .)
 
-.bss            0x00800072        0x0
-                0x00800072                PROVIDE (__bss_start, .)
+.bss            0x00800076        0x0
+                0x00800076                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x00800072        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
- .bss           0x00800072        0x0 ./MCAL/7-UART/UART_program.o
- .bss           0x00800072        0x0 ./MCAL/1-DIO/DIO_program.o
- .bss           0x00800072        0x0 ./APP/main.o
- .bss           0x00800072        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x00800072        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800076        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ .bss           0x00800076        0x0 ./MCAL/7-UART/UART_program.o
+ .bss           0x00800076        0x0 ./MCAL/1-DIO/DIO_program.o
+ .bss           0x00800076        0x0 ./APP/main.o
+ .bss           0x00800076        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800076        0x0 c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
  *(.bss*)
  *(COMMON)
-                0x00800072                PROVIDE (__bss_end, .)
-                0x00000c2e                __data_load_start = LOADADDR (.data)
-                0x00000c40                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800076                PROVIDE (__bss_end, .)
+                0x00000c6a                __data_load_start = LOADADDR (.data)
+                0x00000c80                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800072        0x0
-                0x00800072                PROVIDE (__noinit_start, .)
+.noinit         0x00800076        0x0
+                0x00800076                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800072                PROVIDE (__noinit_end, .)
-                0x00800072                _end = .
-                0x00800072                PROVIDE (__heap_start, .)
+                0x00800076                PROVIDE (__noinit_end, .)
+                0x00800076                _end = .
+                0x00800076                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -320,17 +320,17 @@ LOAD c:/users/hp/downloads/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x12e4
+.stab           0x00000000     0x12f0
  *(.stab)
- .stab          0x00000000      0x6f0 ./MCAL/7-UART/UART_program.o
- .stab          0x000006f0      0x918 ./MCAL/1-DIO/DIO_program.o
+ .stab          0x00000000      0x750 ./MCAL/7-UART/UART_program.o
+ .stab          0x00000750      0x918 ./MCAL/1-DIO/DIO_program.o
                                 0x924 (size before relaxing)
- .stab          0x00001008      0x2dc ./APP/main.o
-                                0x474 (size before relaxing)
+ .stab          0x00001068      0x288 ./APP/main.o
+                                0x420 (size before relaxing)
 
-.stabstr        0x00000000      0xbb9
+.stabstr        0x00000000      0xbe5
  *(.stabstr)
- .stabstr       0x00000000      0xbb9 ./MCAL/7-UART/UART_program.o
+ .stabstr       0x00000000      0xbe5 ./MCAL/7-UART/UART_program.o
 
 .stab.excl
  *(.stab.excl)
