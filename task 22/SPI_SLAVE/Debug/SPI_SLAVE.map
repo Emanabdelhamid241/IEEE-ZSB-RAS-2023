@@ -1,0 +1,400 @@
+Archive member included because of file (symbol)
+
+f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o (exit)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+LOAD ./MCAL/8-SPI/SPI_program.o
+LOAD ./MCAL/7-UART/UART_program.o
+LOAD ./MCAL/1-DIO/DIO_program.o
+LOAD ./APP/main.o
+LOAD f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0xd8a
+ *(.vectors)
+ .vectors       0x00000000       0x54 f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000054                . = ALIGN (0x2)
+                0x00000054                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000054        0x0 linker stubs
+ *(.trampolines*)
+                0x00000054                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000054                __ctors_start = .
+ *(.ctors)
+                0x00000054                __ctors_end = .
+                0x00000054                __dtors_start = .
+ *(.dtors)
+                0x00000054                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000054        0x0 f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+                0x00000054                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000054        0xc f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000060        0x8 f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ *(.init9)
+ *(.text)
+ .text          0x00000068        0x4 f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+                0x00000068                __vector_1
+                0x00000068                __vector_12
+                0x00000068                __bad_interrupt
+                0x00000068                __vector_6
+                0x00000068                __vector_3
+                0x00000068                __vector_11
+                0x00000068                __vector_13
+                0x00000068                __vector_17
+                0x00000068                __vector_19
+                0x00000068                __vector_7
+                0x00000068                __vector_5
+                0x00000068                __vector_4
+                0x00000068                __vector_9
+                0x00000068                __vector_2
+                0x00000068                __vector_15
+                0x00000068                __vector_8
+                0x00000068                __vector_14
+                0x00000068                __vector_10
+                0x00000068                __vector_16
+                0x00000068                __vector_18
+                0x00000068                __vector_20
+ .text          0x0000006c        0x0 ./MCAL/8-SPI/SPI_program.o
+ .text          0x0000006c        0x0 ./MCAL/7-UART/UART_program.o
+ .text          0x0000006c        0x0 ./MCAL/1-DIO/DIO_program.o
+ .text          0x0000006c        0x0 ./APP/main.o
+ .text          0x0000006c        0x0 f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x0000006c                . = ALIGN (0x2)
+ *(.text.*)
+ .text.SPI_enum_INIT
+                0x0000006c       0xd0 ./MCAL/8-SPI/SPI_program.o
+                0x0000006c                SPI_enum_INIT
+ .text.SPI_enum_trans_recieve
+                0x0000013c       0x4e ./MCAL/8-SPI/SPI_program.o
+                0x0000013c                SPI_enum_trans_recieve
+ .text.SPI_enum_Send_Byte
+                0x0000018a       0x22 ./MCAL/8-SPI/SPI_program.o
+                0x0000018a                SPI_enum_Send_Byte
+ .text.SPI_enum_recieve_Byte
+                0x000001ac       0x3e ./MCAL/8-SPI/SPI_program.o
+                0x000001ac                SPI_enum_recieve_Byte
+ .text.UART_enum_INIT
+                0x000001ea       0xbc ./MCAL/7-UART/UART_program.o
+                0x000001ea                UART_enum_INIT
+ .text.UART_enum_SEND_Byte
+                0x000002a6       0x34 ./MCAL/7-UART/UART_program.o
+                0x000002a6                UART_enum_SEND_Byte
+ .text.UART_enum_RECIEVE_Byte
+                0x000002da       0x44 ./MCAL/7-UART/UART_program.o
+                0x000002da                UART_enum_RECIEVE_Byte
+ .text.UART_enum_Send_String
+                0x0000031e       0x78 ./MCAL/7-UART/UART_program.o
+                0x0000031e                UART_enum_Send_String
+ .text.UART_enum_RECIEVE_String
+                0x00000396       0x7c ./MCAL/7-UART/UART_program.o
+                0x00000396                UART_enum_RECIEVE_String
+ .text.DIO_voidInit
+                0x00000412       0x44 ./MCAL/1-DIO/DIO_program.o
+                0x00000412                DIO_voidInit
+ .text.DIO_u8_Set_Pin_Direction
+                0x00000456      0x266 ./MCAL/1-DIO/DIO_program.o
+                0x00000456                DIO_u8_Set_Pin_Direction
+ .text.DIO_u8_Set_Pin_Value
+                0x000006bc      0x266 ./MCAL/1-DIO/DIO_program.o
+                0x000006bc                DIO_u8_Set_Pin_Value
+ .text.DIO_u8_Get_Pin_Value
+                0x00000922      0x17a ./MCAL/1-DIO/DIO_program.o
+                0x00000922                DIO_u8_Get_Pin_Value
+ .text.DIO_u8_Set_Port_Direction
+                0x00000a9c      0x148 ./MCAL/1-DIO/DIO_program.o
+                0x00000a9c                DIO_u8_Set_Port_Direction
+ .text.DIO_u8_Set_Port_Value
+                0x00000be4       0x90 ./MCAL/1-DIO/DIO_program.o
+                0x00000be4                DIO_u8_Set_Port_Value
+ .text.DIO_u8_Get_Port_Value
+                0x00000c74       0xb4 ./MCAL/1-DIO/DIO_program.o
+                0x00000c74                DIO_u8_Get_Port_Value
+ .text.main     0x00000d28       0x5e ./APP/main.o
+                0x00000d28                main
+ .text.libgcc   0x00000d86        0x0 f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00000d86                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000d86        0x0 f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00000d86                exit
+                0x00000d86                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000d86        0x4 f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000d8a                _etext = .
+
+.data           0x00800060        0x0 load address 0x00000d8a
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ .data          0x00800060        0x0 ./MCAL/8-SPI/SPI_program.o
+ .data          0x00800060        0x0 ./MCAL/7-UART/UART_program.o
+ .data          0x00800060        0x0 ./MCAL/1-DIO/DIO_program.o
+ .data          0x00800060        0x0 ./APP/main.o
+ .data          0x00800060        0x0 f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800060                . = ALIGN (0x2)
+                0x00800060                _edata = .
+                0x00800060                PROVIDE (__data_end, .)
+
+.bss            0x00800060        0x0
+                0x00800060                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800060        0x0 f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ .bss           0x00800060        0x0 ./MCAL/8-SPI/SPI_program.o
+ .bss           0x00800060        0x0 ./MCAL/7-UART/UART_program.o
+ .bss           0x00800060        0x0 ./MCAL/1-DIO/DIO_program.o
+ .bss           0x00800060        0x0 ./APP/main.o
+ .bss           0x00800060        0x0 f:/1/telegram desktop/sdk_win_64/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.bss*)
+ *(COMMON)
+                0x00800060                PROVIDE (__bss_end, .)
+                0x00000d8a                __data_load_start = LOADADDR (.data)
+                0x00000d8a                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800060        0x0
+                0x00800060                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800060                PROVIDE (__noinit_end, .)
+                0x00800060                _end = .
+                0x00800060                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000     0x1710
+ *(.stab)
+ .stab          0x00000000      0x438 ./MCAL/8-SPI/SPI_program.o
+ .stab          0x00000438      0x744 ./MCAL/7-UART/UART_program.o
+                                0x750 (size before relaxing)
+ .stab          0x00000b7c      0x918 ./MCAL/1-DIO/DIO_program.o
+                                0x924 (size before relaxing)
+ .stab          0x00001494      0x27c ./APP/main.o
+                                0x414 (size before relaxing)
+
+.stabstr        0x00000000      0xd18
+ *(.stabstr)
+ .stabstr       0x00000000      0xd18 ./MCAL/8-SPI/SPI_program.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(SPI_SLAVE.elf elf32-avr)
+LOAD linker stubs
